@@ -1,1 +1,1 @@
-ExeCopyFromDir = \\smaug\Shader\Mandelbulber2\
+ExeCopyFromDir = \\smaug\Shader\Mandelbulber\
