@@ -46,3 +46,7 @@
 ## Notes
 * Animation
 	* Rendering of the last frame (in batch of 1 frame) doesn't work, it works fine if the last frame is in a larger batch
+* *test* folder with xml files is not needed currently, but might be useful for testing later on
+
+## Todo
+* Do a Python scene parser for Mandelbulber2 `*.fract` files which will fill in correct settings in **rrSubmitter**
