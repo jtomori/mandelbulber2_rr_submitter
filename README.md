@@ -2,20 +2,25 @@
 
 ## Setup
 * Copy contents of **render_apps** folder into RR installation directory.
-* Put Mandelbulber2 standalone version on a network share
+* Put Mandelbulber2 standalone version on a network share (e.g. `\\share\renderers\Mandelbulber\mandelbulber_*` where `*` is version, like 2.14 or 2.15..)
 	* Set **ExeCopyFromDir** in *render_apps/_config/3D20__Mandelbulber__inhouse.inc* to that location
-* Put your Mandelbulber2 configuration file on a network share
-	* Set **\<rrLocalBin\>rrCopy -oa** source path to that location (first path is source, the second one is destination)
-	* RR copies this settings file before each render to local render user directory, where it is picked up by Mandelbulber2
+		* e.g.
+			```
+			ExeCopyFromDir = \\share\renderers\Mandelbulber
+			```
+* Put your Mandelbulber2 configuration file on a network share (e.g. `\\share\renderers\Mandelbulber\config\mandelbulber_*.ini`, you can find it after first local run of Mandelbulber2 in `C:\Users\<user>\mandelbulber\mandelbulber_*.ini`)
+	* Make sure that `<rrLocalBin>rrCopy -oa "\\share\renderers\Mandelbulber\config\mandelbulber_<rrJobVersionMajor><rrJobVersionMinor>.ini"` line in submitters config files (*3D20_Mandelbulber_\*.cfg*) is pointing to the location of your config file
 
 ## Usage
 * Automatic way
 	* Drag & drop your **.fract** file on **rrSubmit_Mandelbulber_2_15.bat** launcher, this will set all of the previous settings
+	* Change Mandelbulber version if needed
 	* Change your Renderer to **Keyframe / Flight / Static** if needed
 	* Set **Sequence Start, End range**
 * Manual way
 	* Load **.fract** settings file
 	* Set *Software* to Mandelbulber
+	* Set Mandelbulber version as needed
 	* Set *Renderer* to **Flight / Keyframe / Static**
 	* Set **Sequence Start, End range** - starting from zero (and subtract one from End range)
 	* Set **Image Dir**
@@ -39,14 +44,5 @@
 	* Set **Company Project**
 
 ## Notes
-* In order for version selection to work properly in RR, remove any additional numbers from paths, because they confuse RR
-	* for example path like this:
-	```
-	\\smaug\Shader\Mandelbulber2\mandelbulber_2.15\mandelbulber2.exe
-	```
-	needs to be converted into this:
-	```
-	\\smaug\Shader\Mandelbulber\mandelbulber_2.15\mandelbulber.exe
-	```
 * Animation
-	* Rendering of the last frame (when batch of 1) doesn't work, it works fine if the last frame is in larger batch
+	* Rendering of the last frame (in batch of 1 frame) doesn't work, it works fine if the last frame is in a larger batch
