@@ -1,0 +1,4 @@
+example_parsers
+.vscode
+*.pyc
+.pytest_cache

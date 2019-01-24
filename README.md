@@ -2,6 +2,7 @@
 
 ## Setup
 * Copy contents of **render_apps** folder into RR installation directory.
+* Copy contents of **submitter_sceneparser** into ?? directory
 * Put Mandelbulber2 standalone version on a network share (e.g. `\\share\renderers\Mandelbulber\mandelbulber_*` where `*` is version, like 2.14 or 2.15..)
 	* Set **ExeCopyFromDir** in *render_apps/_config/3D20__Mandelbulber__inhouse.inc* to that location
 		* e.g.
@@ -13,10 +14,7 @@
 
 ## Usage
 * Automatic way
-	* Drag & drop your **.fract** file on **rrSubmit_Mandelbulber_2_15.bat** launcher, this will set all of the previous settings
-	* Change Mandelbulber version if needed
-	* Change your Renderer to **Keyframe / Flight / Static** if needed
-	* Set **Sequence Start, End range**
+	* Drag & drop your **.fract** file on **rrSubmit_Mandelbulber_2_15.bat** launcher
 * Manual way
 	* Load **.fract** settings file
 	* Set *Software* to Mandelbulber
@@ -46,7 +44,6 @@
 ## Notes
 * Animation
 	* Rendering of the last frame (in batch of 1 frame) doesn't work, it works fine if the last frame is in a larger batch
-* *test* folder with xml files is not needed currently, but might be useful for testing later on
-
-## Todo
-* Do a Python scene parser for Mandelbulber2 `*.fract` files which will fill in correct settings in **rrSubmitter**
+* Scene parser
+	* Seqence start is assumed to be 0
+	* If both Keyframe and Flight output directories are set, Keyframe (directory and renderer) is used
