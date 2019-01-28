@@ -1,4 +1,4 @@
-import parser
+import m2_parser
 """
 Tests if parser outputs expected results in the provided example scenes. Relies on pytest module.
 
@@ -14,10 +14,10 @@ def test_1():
         "version" : "2.14",
         "out_folder" : "S:\\020_Preproduction\\050_RND\\450_m2_tests\\aboxmod1_001\\",
         "seq_start" : 0,
-        "seq_end" : 1,
+        "seq_end" : 0,
         "renderer" : "Flight"
     }
-    parsed_dict = parser.parse_mandelbulber(content)
+    parsed_dict = m2_parser.parse_mandelbulber(content)
 
     assert expoected_dict == parsed_dict
 
@@ -29,10 +29,10 @@ def test_2():
         "version" : "2.14",
         "out_folder" : "S:\\020_Preproduction\\050_RND\\450_m2_tests\\aboxmod1_001_anim\\",
         "seq_start" : 0,
-        "seq_end" : 600,
+        "seq_end" : 599,
         "renderer" : "Keyframe"
     }
-    parsed_dict = parser.parse_mandelbulber(content)
+    parsed_dict = m2_parser.parse_mandelbulber(content)
 
     assert expoected_dict == parsed_dict
 
@@ -44,9 +44,9 @@ def test_3():
         "version" : "2.14",
         "out_folder" : "S:\\020_Preproduction\\050_RND\\450_m2_tests\\aboxmod1_001_anim\\",
         "seq_start" : 0,
-        "seq_end" : 61,
+        "seq_end" : 60,
         "renderer" : "Flight"
     }
-    parsed_dict = parser.parse_mandelbulber(content)
+    parsed_dict = m2_parser.parse_mandelbulber(content)
 
     assert expoected_dict == parsed_dict

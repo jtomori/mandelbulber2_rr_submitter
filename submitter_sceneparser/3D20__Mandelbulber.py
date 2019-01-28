@@ -32,7 +32,7 @@ def parse_mandelbulber(content):
         "renderer" : ""
     }
 
-    This parser is deveoped in parser.py file and then merged with 3D20__Mandelbulber.py file, which is used by RR
+    This parser is deveoped in m2_parser.py file and then merged with 3D20__Mandelbulber.py file, which is used by RR
     """
     
     # init dict
@@ -76,7 +76,7 @@ def parse_mandelbulber(content):
             frame = frame.replace(";", "")
             frame = frame.split(" ")[-1]
 
-            out_dict["seq_end"] = int(frame)
+            out_dict["seq_end"] = int(frame)-1
         
         elif line.startswith("anim_keyframe_dir "):
             out = line
@@ -93,7 +93,7 @@ def parse_mandelbulber(content):
             frame = frame.split(" ")[-1]
 
             renderer = "Keyframe"
-            out_dict["seq_end"] = int(frame)
+            out_dict["seq_end"] = int(frame)-1
 
     return out_dict
 

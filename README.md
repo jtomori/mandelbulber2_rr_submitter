@@ -27,7 +27,7 @@
 	* Set *Software* to Mandelbulber
 	* Set Mandelbulber version as needed
 	* Set *Renderer* to **Flight / Keyframe / Static**
-	* Set **Sequence Start, End range** - starting from zero
+	* Set **Sequence Start, End range** - starting from zero and end range - 1
 	* Set **Image Dir**
 		* Animation - set it to the same value as in Mandelbulber, Mandelbulber ignores this setting, it is only for RR to check if frames exist
 			* For example you can set it to `<SceneFolder>\<Scene>_render`
