@@ -11,12 +11,18 @@
 			```
 * Put your Mandelbulber2 configuration file on a network share (e.g. `\\share\renderers\Mandelbulber\config\mandelbulber_*.ini`, you can find it after first local run of Mandelbulber2 in `C:\Users\<user>\mandelbulber\mandelbulber_*.ini`)
 	* Make sure that `<rrLocalBin>rrCopy -oa "\\share\renderers\Mandelbulber\config\mandelbulber_<rrJobVersionMajor><rrJobVersionMinor>.ini"` line in submitters config files (*3D20_Mandelbulber_\*.cfg*) is pointing to the location of your config file
+* Optionally you can create a launcher for submitting your Mandelbulber2 scenes:
+	* Create a shortcut from `render_apps\_submitplugins\rrSubmit_Mandelbulber.bat`, set its icon to `Mandelbulber.ico` in the same folder
+	* Enable drag & drop for your launcher by modifying settings of the shortcut:
+		* Change target from `S:\my_project\mandelbulber2_rr_submitter\render_apps\_submitplugins\rrSubmit_Mandelbulber.bat` to `C:\Windows\System32\cmd.exe /c "S:\my_project\mandelbulber2_rr_submitter\render_apps\_submitplugins\rrSubmit_Mandelbulber.bat"`
+		* [Source](https://superuser.com/a/193255)
+
 
 ## Usage
 * Automatic way
 	* Open your **.fract** file with **rrSubmitter**, this will automatically set your render output path, renderer, version, frame range, etc.
 		* Or alternatively you can drag & drop your **.fract** file on **rrSubmit_Mandelbulber_2_15.bat** launcher
-* Manual way *(all those steps are now automated with RR scene parser for Mandelbulber2 files, but I keep it for reference)*
+* Manual way *(all those steps are now automated with RR scene parser for Mandelbulber2 files, but I kept them here for reference)*
 	* Load **.fract** settings file
 	* Set *Software* to Mandelbulber
 	* Set Mandelbulber version as needed
@@ -39,6 +45,7 @@
 		* **png16alpha** - 16-bit PNG with alpha channel format
 		* **exr** - EXR format
 		* **tiff** - TIFF format
+
 
 ## Notes
 * Animation
