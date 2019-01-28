@@ -9,6 +9,8 @@ def parse_mandelbulber(content):
         "seq_end" : 0,
         "renderer" : ""
     }
+
+    This parser is deveoped in parser.py file and then merged with 3D20__Mandelbulber.py file, which is used by RR
     """
     
     # init dict

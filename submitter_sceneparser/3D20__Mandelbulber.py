@@ -17,7 +17,7 @@
 #
 ######################################################################
 
-# TODO: move functionality into a separate file - for easier testing without rr module available
+# TODO:
 #       update readme
 
 def parse_mandelbulber(content):
@@ -31,6 +31,8 @@ def parse_mandelbulber(content):
         "seq_end" : 0,
         "renderer" : ""
     }
+
+    This parser is deveoped in parser.py file and then merged with 3D20__Mandelbulber.py file, which is used by RR
     """
     
     # init dict
@@ -120,7 +122,7 @@ render_app.setVersionBoth(settings_dict["version"])
 new_job = rr.getNewJob()
 new_job.sceneName = scene_file
 new_job.renderApp = render_app
-new_job.imageDir = settings_dict["out_file"]
+new_job.imageDir = settings_dict["out_folder"]
 new_job.imageFileName = "frame_"
 new_job.imageFramePadding = 7
 new_job.imageExtension = ".exr"

@@ -2,7 +2,7 @@
 
 ## Setup
 * Copy contents of **render_apps** folder into RR installation directory.
-* Copy contents of **submitter_sceneparser** into ?? directory
+* Copy `3D20__Mandelbulber.py` from **submitter_sceneparser** into `plugins64\submitter_sceneparser` inside of RR directory
 * Put Mandelbulber2 standalone version on a network share (e.g. `\\share\renderers\Mandelbulber\mandelbulber_*` where `*` is version, like 2.14 or 2.15..)
 	* Set **ExeCopyFromDir** in *render_apps/_config/3D20__Mandelbulber__inhouse.inc* to that location
 		* e.g.
@@ -14,7 +14,8 @@
 
 ## Usage
 * Automatic way
-	* Drag & drop your **.fract** file on **rrSubmit_Mandelbulber_2_15.bat** launcher
+	* Open your **.fract** file with **rrSubmitter**, this will automatically set your render output path, renderer, version, frame range, etc.
+		* Or alternatively you can drag & drop your **.fract** file on **rrSubmit_Mandelbulber_2_15.bat** launcher
 * Manual way
 	* Load **.fract** settings file
 	* Set *Software* to Mandelbulber
