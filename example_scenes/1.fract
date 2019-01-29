@@ -1,0 +1,32 @@
+# Mandelbulber settings file
+# version 2.14
+# only modified parameters
+[main_parameters]
+ambient_occlusion_enabled true;
+anim_flight_dir S:\020_Preproduction\050_RND\450_m2_tests\aboxmod1_001\;
+camera 2.917432085162071 -5.154323762275558 2.581602590157804;
+camera_distance_to_target 2.124072208866862e-05;
+camera_rotation -36.8504232965096 76.85548170320163 82.09898720432767;
+camera_top 0.7123276893496976 -0.7011505381298785 0.03125997226330654;
+DOF_enabled true;
+DOF_focus 0.05324715748429298;
+DOF_radius 4.08;
+flight_last_to_render 1;
+flight_movement_speed_vector 2.794919980132026e-06 3.905002480023492e-06 2.069076249890451e-05;
+flight_rotation_speed_vector 0.002083333333333333 -0.004722222222222222 0;
+formula_1 64;
+image_height 1080;
+image_width 1920;
+keyframe_last_to_render 0;
+main_light_alpha 78.84;
+main_light_beta 20.19;
+mat1_is_defined true;
+target 2.917434982034675 -5.15431989704245 2.581623274363783;
+volumetric_fog_colour_1_distance 0.006372216626617175;
+volumetric_fog_colour_2_distance 0.01274443325323435;
+volumetric_fog_density 0.2;
+volumetric_fog_distance_factor 0.01274443325323435;
+volumetric_fog_enabled true;
+[frames]
+frame;main_camera_x;main_camera_y;main_camera_z;main_target_x;main_target_y;main_target_z;main_camera_top_x;main_camera_top_y;main_camera_top_z;main_flight_movement_speed_vector_x;main_flight_movement_speed_vector_y;main_flight_movement_speed_vector_z;main_flight_rotation_speed_vector_x;main_flight_rotation_speed_vector_y;main_flight_rotation_speed_vector_z
+0;2.917432085162071;-5.154323762275558;2.581602590157804;2.917434982034675;-5.15431989704245;2.581623274363783;0.7123276893496976;-0.7011505381298785;0.03125997226330654;2.794919980132026e-06;3.905002480023492e-06;2.069076249890451e-05;0.002083333333333333;-0.004722222222222222;0
