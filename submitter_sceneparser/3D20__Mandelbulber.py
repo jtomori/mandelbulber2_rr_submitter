@@ -132,13 +132,13 @@ new_job.uiIsChecked = True
 new_job.seqStart = settings_dict["seq_start"]
 new_job.seqEnd = settings_dict["seq_end"]
 new_job.layer = "Scene"
-new_job.customSet_Str("rrSubmitterParameter", "SequenceDivide=1~1")
-new_job.customSet_Str("rrSubmitterParameter", "SeqDivMIN=1~1")
-new_job.customSet_Str("rrSubmitterParameter", "SeqDivMAX=1~5")
-new_job.customSet_Str("rrSubmitterParameter", "PPSequenceCheck=1~0")
-new_job.customSet_Str("rrSubmitterParameter", "PPCreateSmallVideo=1~0")
-new_job.customSet_Str("rrSubmitterParameter", "RenderPreviewFirst=1~0")
-#new_job.customSet_Str("rrSubmitterParameter", "CompanyProjectName=0~strandsofmind")
 
+submitter_parameters_list = [
+    "SequenceDivide=1~1",
+    "SeqDivMIN=1~1",
+    "SeqDivMAX=1~5"
+]
+
+rr.setSubmitterParameter(" ".join(submitter_parameters_list))
 rr.jobAll_set(999,new_job)
 rr.returnFromPlugin(rrGlobal.pluginReturn.successful)
